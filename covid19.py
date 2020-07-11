@@ -1,18 +1,18 @@
-#import dataset
+#Import dataset
 import pandas as pd
 data=pd.read_csv('covid19.csv')
-#cleaning of the data
+#Cleaning of the data
 data.drop(['Sno','Time','Date','ConfirmedIndianNational','ConfirmedForeignNational'],inplace=True,axis=1)
-#splitting od dat into x and y
+#Splitting of data into x and y
 x=data.iloc[:,0].values
 y=data.iloc[:,1:].values
-#encoding the data
+#Encoding the data
 from sklearn.preprocessing import LabelEncoder 
 lab=LabelEncoder()
-x=lab.fit_transform(x)
-#visualizing the data
+x=lab.fit_transform(x)                   #Encode the name of states into number in alphabetical order
+#Visualizing the data
 from matplotlib import pyplot as plt
-w=0.35
+w=0.35                                   #variable which is to visualize the graph more easily
 plt.subplots(figsize=(10,7))
 p1=plt.bar(x,y[:,2],w,color='r')
 p2=plt.bar(x-w,y[:,0],w,color='g')
