@@ -12,7 +12,7 @@ lab=LabelEncoder()
 x=lab.fit_transform(x)                   #Encode the name of states into number in alphabetical order
 #Visualizing the data
 from matplotlib import pyplot as plt
-w=0.35                                   #variable which is to visualize the graph more easily
+w=0.35                                   #variable which helps to visualize the graph more easily
 plt.subplots(figsize=(10,7))
 p1=plt.bar(x,y[:,2],w,color='r')
 p2=plt.bar(x-w,y[:,0],w,color='g')
