@@ -9,7 +9,7 @@ y=data.iloc[:,1:].values
 #Encoding the data
 from sklearn.preprocessing import LabelEncoder 
 lab=LabelEncoder()
-x=lab.fit_transform(x)                   #Encode the name of states into number in alphabetical order
+x=lab.fit_transform(x)                   #Encoded the name of states into number in alphabetical order
 #Visualizing the data
 from matplotlib import pyplot as plt
 w=0.35                                   #variable which helps to visualize the graph more easily
